@@ -8,6 +8,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import 'dayjs/locale/es';
 dayjs.locale('es');
 
+
 // Lista de fechas patrias argentinas
 const fechasPatrias: { [key: string]: string } = {
   '2025-03-24': 'Día Nacional de la Memoria por la Verdad y la Justicia',

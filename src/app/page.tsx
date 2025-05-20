@@ -1,17 +1,24 @@
-
 'use client'
+
+import { Raleway } from 'next/font/google';
 import Calendar from './components/Calendar';
 import Lista from './components/lista';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/header';
+import { Carrousel } from './components/Carrousel';
 
+
+
+// Importa y configura la fuente
+const raleway = Raleway({ subsets: ['latin'], weight: ['100', '400', '700', '900'] });
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zinc-100 bg-repeat flex flex-col">
+    <div className={`${raleway.className} min-h-screen bg-zinc-100 bg-repeat flex flex-col`}>
 
       {/* Header */}
-      <header className="border-b-2 border-black p-4 bg-cyan-200 bg-repeat">
-        
+      <header className="p-4 bg-white bg-repeat">
+        <Header />
       </header>
 
       {/* Contenedor de los asides centrados */}
@@ -23,13 +30,14 @@ export default function Home() {
 
         {/* Aside Derecho */}
         <aside className="w-60 pl-4">
+          <Carrousel />
           <Calendar />          
         </aside>
       </div>
 
       {/* Footer */}
-      <footer className="border-t-2  bg-gray-600 bg-repeat border-black p-48">
-        
+      <footer className="border-t-2 bg-gray-600 bg-repeat border-black p-24">
+        {/* Puedes agregar contenido del footer aquí */}
       </footer>
     </div>
   );
