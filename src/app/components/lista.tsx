@@ -4,46 +4,54 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Dashboard() {
   const faculties = [
     {
-      title: 'Facultad de la Defensa',
+      title: 'Autogestion EAM',
       text: 'Programas de grado y posgrado en ingeniería y tecnología.',
       image: 'images/fadena.png',
+      link: 'http://autogestion.eam.undef.edu.ar/3w/',
     },
     {
-      title: 'Facultad del Ejército',
+      title: 'Autogestion EAM',
       text: 'Formación médica con enfoque en investigación y salud pública.',
       image: 'images/fadena.png',
+      link: '',
     },
     {
-      title: 'Facultad de la Fuerza Aérea',
+      title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
+            link: '',
     },
         {
-      title: 'Facultad Militar Conjunta',
+      title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
+            link: '',
     },
         {
-      title: 'Centro Regional Universitario Córdoba - IUA',
+      title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
+            link: '',
     },
             {
-      title: 'Facultad de Ingeniería del Ejército',
+      title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
+            link: '',
     },
   ];
 
   return (
     <div className="d-flex flex-wrap justify-content-center">
       {faculties.map((faculty, index) => (
-        <FacultyCard
-          key={index}
-          title={faculty.title}
-          text={faculty.text}
-          image={faculty.image}
-        />
+<FacultyCard
+  key={index}
+  title={faculty.title}
+  text={faculty.text}
+  image={faculty.image}
+  link={faculty.link || '#'}
+/>
+
       ))}
     </div>
   );

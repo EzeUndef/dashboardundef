@@ -5,7 +5,6 @@ import Calendar from './components/Calendar';
 import Lista from './components/lista';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header';
-import { Carrousel } from './components/Carrousel';
 
 
 
@@ -30,7 +29,6 @@ export default function Home() {
 
         {/* Aside Derecho */}
         <aside className="w-60 pl-4">
-          <Carrousel />
           <Calendar />          
         </aside>
       </div>
