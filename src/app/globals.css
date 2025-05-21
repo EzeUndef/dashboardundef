@@ -16,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #ededed;
+    --background: #020202;
+    --foreground: #000000;
   }
 } 
 
@@ -25,4 +25,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==================== MUI DateCalendar Fix ==================== */
+
+/* Texto del botón de mes (enero, febrero...) */
+.MuiPickersMonth-monthButton {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+/* Texto del botón de año en el popover */
+.MuiPickersYear-yearButton {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+/* Año o mes actualmente seleccionado */
+.Mui-selected {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+/* Etiqueta del mes y año en la cabecera del calendario */
+.MuiPickersCalendarHeader-label {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+/* Íconos de flechas para navegar meses */
+.MuiPickersArrowSwitcher-button {
+  color: black !important;
 }

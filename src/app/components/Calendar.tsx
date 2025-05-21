@@ -1,62 +1,72 @@
-import * as React from 'react';
-import { useState } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
-import { Typography, Box } from '@mui/material';
+import { esES } from '@mui/x-date-pickers/locales';
 import dayjs, { Dayjs } from 'dayjs';
 import 'dayjs/locale/es';
+
 dayjs.locale('es');
 
+interface Feriado {
+  dia: string;
+  motivo: string;
+}
 
-// Lista de fechas patrias argentinas
-const fechasPatrias: { [key: string]: string } = {
-  '2025-03-24': 'Día Nacional de la Memoria por la Verdad y la Justicia',
-  '2025-04-02': 'Día del Veterano y de los Caídos en la Guerra de Malvinas',
-  '2025-05-01': 'Día del Trabajador (feriado internacional)',
-  '2025-05-25': 'Día de la Revolución de Mayo',
-  '2025-06-20': 'Paso a la Inmortalidad del General Manuel Belgrano',
-  '2025-07-09': 'Día de la Independencia',
-  '2025-08-17': 'Paso a la Inmortalidad del General José de San Martín',
-  '2025-10-12': 'Día del Respeto a la Diversidad Cultural',
-  '2025-11-20': 'Día de la Soberanía Nacional',
-  '2025-12-08': 'Día de la Inmaculada Concepción de María',
-  '2025-12-25': 'Navidad (feriado religioso)',
-};
-
-export default function AddWeekNumber() {
+export default function CalendarioFeriados() {
   const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
+  const [feriados, setFeriados] = useState<Feriado[]>([]);
 
-  const mensajeConmemorativo = selectedDate
-    ? fechasPatrias[selectedDate.format('YYYY-MM-DD')]
+  useEffect(() => {
+    fetch('https://api.argentinadatos.com/v1/feriados/2025')
+      .then((res) => res.json())
+      .then((data: Feriado[]) => setFeriados(data))
+      .catch((err) => console.error('Error al obtener feriados:', err));
+  }, []);
+
+  const feriadoDelDia = selectedDate
+    ? feriados.find(f => f.dia === selectedDate.format('YYYY-MM-DD'))
     : null;
 
   return (
     <LocalizationProvider
       dateAdapter={AdapterDayjs}
-      localeText={{
-        calendarWeekNumberHeaderText: '#',
-        calendarWeekNumberText: (weekNumber: number) => `${weekNumber}.`,
-      }}
+      localeText={esES.components.MuiLocalizationProvider.defaultProps.localeText}
     >
-      <Box sx={{ p: 2 }}>
-        <DateCalendar
-          displayWeekNumber
-          value={selectedDate}
-          onChange={(newDate) => setSelectedDate(newDate)}
-        />
+      <div className="p-6">
+        <div className="bg-cyan-100 rounded-xl shadow-2xl p-4">
+          <DateCalendar
+            displayWeekNumber
+            value={selectedDate}
+            onChange={(newDate) => setSelectedDate(newDate)}
+            slotProps={{
+              calendarHeader: {
+                className: "text-black font-bold",
+              },
+              leftArrowIcon: {
+                className: "text-black",
+              },
+              rightArrowIcon: {
+                className: "text-black",
+              },
+              day: {
+                className: "text-black font-bold",
+              },
+            }}
+          />
+        </div>
 
-        {mensajeConmemorativo && (
-          <Box sx={{ mt: 2, p: 2, border: '1px solid #ccc', borderRadius: 2 }}>
-            <Typography variant="h6" color="primary">
+        {feriadoDelDia && (
+          <div className="mt-6 p-4 border border-gray-300 rounded-md">
+            <h2 className="text-black font-bold text-lg">
               {selectedDate?.format('D [de] MMMM')}
-            </Typography>
-            <Typography variant="body1">
-              {mensajeConmemorativo}
-            </Typography>
-          </Box>
+            </h2>
+            <p className="text-black font-bold">{feriadoDelDia.motivo}</p>
+          </div>
         )}
-      </Box>
+      </div>
     </LocalizationProvider>
   );
 }

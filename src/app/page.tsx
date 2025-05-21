@@ -3,7 +3,6 @@
 import { Raleway } from 'next/font/google';
 import Calendar from './components/Calendar';
 import Lista from './components/lista';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header';
 
 // Importa y configura la fuente
@@ -18,20 +17,20 @@ export default function Home() {
       </header>
 
       {/* Contenedor principal para Lista y Calendar */}
-      <div className="flex justify-center flex-1 items-start gap-96 w-full max-w-6xl mx-auto mt-20">
+      <div className="flex flex-1 justify-between w-full max-w-6xl mx-auto mt-20 px-4">
         {/* Aside Izquierdo: Lista */}
-        <aside className="w-full max-w-lg ">
+        <aside className="w-full max-w-lg">
           <Lista />
         </aside>
 
         {/* Aside Derecho: Calendar */}
-        <aside className="w-full max-w-lg">
+        <aside className="w-full max-w-lg -mr-60">
           <Calendar />
         </aside>
       </div>
 
       {/* Footer */}
-      <footer className="border-t-2 bg-gray-600 bg-repeat border-black p-24">
+      <footer className="bg-gray-600 bg-repeat border-black p-16">
         {/* Contenido del footer */}
       </footer>
     </div>
