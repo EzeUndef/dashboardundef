@@ -19,42 +19,43 @@ function Dashboard() {
       title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
-            link: '',
+      link: '',
     },
-        {
+    {
       title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
-            link: '',
+      link: '',
     },
-        {
+    {
       title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
-            link: '',
+      link: '',
     },
-            {
+    {
       title: 'Autogestion EAM',
       text: 'Estudios jurídicos y programas en leyes y justicia.',
       image: 'images/fadena.png',
-            link: '',
+      link: '',
     },
   ];
 
   return (
-    <div className="d-flex flex-wrap justify-content-center">
+<div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full max-w-6xl mx-auto">
       {faculties.map((faculty, index) => (
-<FacultyCard
-  key={index}
-  title={faculty.title}
-  text={faculty.text}
-  image={faculty.image}
-  link={faculty.link || '#'}
-/>
-
+        <FacultyCard
+          key={index}
+          title={faculty.title}
+          text={faculty.text}
+          image={faculty.image}
+          link={faculty.link || '#'}
+        />
       ))}
     </div>
+
   );
 }
 
 export default Dashboard;
+

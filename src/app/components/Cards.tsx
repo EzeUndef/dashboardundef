@@ -11,7 +11,7 @@ interface FacultyCardProps {
 function FacultyCard({ title, text, image, link }: FacultyCardProps) {
   return (
     <a href={link} className="no-underline">
-      <div className="transition duration-150 hover:scale-105 shadow-xl bg-white dark:bg-neutral-900 text-black dark:text-white rounded-md overflow-hidden max-w-sm m-2">
+<div className="w-64 transition duration-150 hover:scale-105 shadow-xl bg-white dark:bg-neutral-900 text-black dark:text-white rounded-md overflow-hidden ">
         <Card className="bg-transparent border-0">
           <Card.Img variant="top" src={image} alt={title} />
           <Card.Body>
@@ -23,6 +23,7 @@ function FacultyCard({ title, text, image, link }: FacultyCardProps) {
     </a>
   );
 }
+
 
 
 export default FacultyCard;
