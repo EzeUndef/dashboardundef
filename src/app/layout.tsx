@@ -30,21 +30,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-100 min-h-screen flex flex-col`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-400 min-h-screen flex flex-col`}>
         {/* Header global */}
         <header className="p-4 bg-white">
           <Header />
         </header>
 
-        {/* Navbar global */}
+
         <BasicExample />
 
-        {/* Contenido de cada página */}
-        <main className="flex-1">
+
+<main className="flex-1">
           {children}
         </main>
 
-        {/* Footer global */}
+
 <footer className="bg-gray-600 text-white p-16">
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
     {[
