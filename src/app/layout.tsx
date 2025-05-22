@@ -68,7 +68,7 @@ export default function RootLayout({
       <img src="/images/icono.png" alt="Icono FADARA" className="w-12 h-12 mt-1" />
       <div>
         <h3 className="text-lg font-bold">FADARA</h3>
-        <p>Francisco N. de Laprida 555 Vicente López, CP 1638, Provincia de Buenos Aires, </p>
+        <p>Francisco N. de Laprida 555, Vicente López</p>
         <a
           href="https://maps.app.goo.gl/9JcnTw91pyCPjsi16"
           target="_blank"
