@@ -54,6 +54,11 @@ export default function RootLayout({
         map: "https://maps.app.goo.gl/FEbsK6EKJUEGhcyE9",
       },
       {
+        name: "UNDEF",
+        address: "Maipú 262, CABA",
+        map: "https://maps.app.goo.gl/FEbsK6EKJUEGhcyE9",
+      },
+      {
         name: "FADARA",
         address: "Francisco N. de Laprida 555, Vicente López",
         map: "https://maps.app.goo.gl/9JcnTw91pyCPjsi16",
@@ -83,11 +88,7 @@ export default function RootLayout({
         address: "Savio 235, CABA",
         map: "https://maps.app.goo.gl/L4hHxHHits9kSDkZ9",
       },
-                  {
-        name: "UNDEF",
-        address: "Maipú 262, CABA",
-        map: "https://maps.app.goo.gl/FEbsK6EKJUEGhcyE9",
-      },
+
     ].map((faculty, index) => (
       <div key={index} className="flex items-start space-x-4">
         <img src="/images/icono.png" alt={`Icono ${faculty.name}`} className="w-8 h-8 mt-1" />
