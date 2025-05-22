@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -70,23 +71,6 @@ export default function RootLayout({
         <p>Francisco N. de Laprida 555 Vicente López, CP 1638, Provincia de Buenos Aires, </p>
         <a
           href="https://maps.app.goo.gl/9JcnTw91pyCPjsi16"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-300 hover:underline text-sm"
-        >
-          Ver en Google Maps
-        </a>
-      </div>
-    </div>
-
-    {/* Facultad 3 (ejemplo genérico) */}
-    <div className="flex items-start space-x-4">
-      <img src="/images/icono.png" alt="Icono FAMET" className="w-12 h-12 mt-1" />
-      <div>
-        <h3 className="text-lg font-bold">FAMET</h3>
-        <p>Base Aérea Militar Morón, Buenos Aires</p>
-        <a
-          href="https://www.google.com/maps?q=Base+Aerea+Militar+Moron"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-300 hover:underline text-sm"
