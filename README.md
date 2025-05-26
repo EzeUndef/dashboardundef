@@ -41,4 +41,9 @@ May 22, 2025
 May 26, 2025
 # Version Beta 1.7 #
 -Se corrigio el calendario, ahora muestra el dia de la fecha patria
+-Se modificaron las imagenes
+-Se agrego la descripcion de cada modulo
+-Queda pendiente hacerlo en forma de lista
+
+
 
