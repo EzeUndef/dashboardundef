@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -13,16 +14,31 @@ dayjs.locale('es');
 interface Feriado {
   dia: string;
   motivo: string;
+  tipo: string;
 }
 
 export default function CalendarioFeriados() {
   const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
   const [feriados, setFeriados] = useState<Feriado[]>([]);
+  const [feriadoHoy, setFeriadoHoy] = useState<Feriado | null>(null);
 
   useEffect(() => {
     fetch('https://api.argentinadatos.com/v1/feriados/2025')
       .then((res) => res.json())
-      .then((data: Feriado[]) => setFeriados(data))
+      .then((data) => {
+        const feriadosAdaptados: Feriado[] = data.map((f: any) => ({
+          dia: f.fecha,
+          motivo: f.nombre,
+          tipo: f.tipo,
+        }));
+        setFeriados(feriadosAdaptados);
+
+        const hoy = dayjs().format('YYYY-MM-DD');
+        const feriadoActual = feriadosAdaptados.find(f => f.dia === hoy);
+        if (feriadoActual) {
+          setFeriadoHoy(feriadoActual);
+        }
+      })
       .catch((err) => console.error('Error al obtener feriados:', err));
   }, []);
 
@@ -33,9 +49,17 @@ export default function CalendarioFeriados() {
   return (
     <LocalizationProvider
       dateAdapter={AdapterDayjs}
+      adapterLocale="es"
       localeText={esES.components.MuiLocalizationProvider.defaultProps.localeText}
     >
       <div className="p-6">
+        {feriadoHoy && (
+          <div className="mb-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-black rounded-md shadow">
+            <h2 className="text-lg font-bold">¡Hoy es un día patrio!</h2>
+            <p>{dayjs().format('D [de] MMMM')}: {feriadoHoy.motivo}</p>
+          </div>
+        )}
+
         <div className="bg-cyan-100 rounded-xl shadow-2xl p-4">
           <DateCalendar
             displayWeekNumber
@@ -59,11 +83,12 @@ export default function CalendarioFeriados() {
         </div>
 
         {feriadoDelDia && (
-          <div className="mt-6 p-4 border border-gray-300 rounded-md">
+          <div className="mt-6 p-4 border border-gray-300 rounded-md bg-white shadow">
             <h2 className="text-black font-bold text-lg">
               {selectedDate?.format('D [de] MMMM')}
             </h2>
-            <p className="text-black font-bold">{feriadoDelDia.motivo}</p>
+            <p className="text-black font-bold">Motivo: {feriadoDelDia.motivo}</p>
+            <p className="text-gray-700 italic">Tipo: {feriadoDelDia.tipo}</p>
           </div>
         )}
       </div>
