@@ -3,68 +3,46 @@ import Lista from '../components/lista';
 const fadenaCards = [
   {
     title: 'UNDEF',
-    text: 'UNDEF',
-    link: 'http://diaguita.undef.ar/diaguita/',
-    image: '/icons/undef.svg',
-    description: 'Diaguita',
-    
-  },
-  {
-    title: 'UNDEF',
-    text: 'UNDEF',
+    text: 'Campus',
     link: 'https://campus.undef.edu.ar/',
-    image: '/icons/undef.svg',
-    description: 'Campus',
+image: '/images/undef.png',
+    description: 'UNDEF',
   },
   {
     title: 'UNDEF',
-    text: 'UNDEF',
+    text: 'Koha',
     link: 'http://koha.undef.edu.ar/',
-    image: '/icons/undef.svg',
-    description: 'Koha',
+image: '/images/undef.png',
+    description: 'UNDEF',
   },
   {
     title: 'UNDEF',
-    text: 'UNDEF',
+    text: 'Mantenimiento',
     link: 'https://mantenimiento.undef.edu.ar/app/',
-    image: '/icons/undef.svg',
-    description: 'Mantenimiento',
+image: '/images/undef.png',
+    description: 'UNDEF',
   },
-      {
+  {
     title: 'UNDEF',
-    text: 'UNDEF',
-    link: 'https://mapuche.undef.ar/mapuche/',
-    image: '/icons/undef.svg',
-    description: 'Mapuche',
-  },
-        {
-    title: 'UNDEF',
-    text: 'UNDEF',
+    text: 'Soporte',
     link: 'https://soporte.undef.edu.ar/app/',
-    image: '/icons/undef.svg',
-    description: 'Soporte',
+image: '/images/undef.png',
+    description: 'UNDEF',
   },
-          {
+  {
     title: 'UNDEF',
-    text: 'UNDEF',
+    text: 'Titulación',
     link: 'http://titulacion.undef.edu.ar/app/',
-    image: '/icons/undef.svg',
-    description: 'Titulación',
-  }, 
-            {
+image: '/images/undef.png',
+    description: 'UNDEF',
+  },
+  {
     title: 'UNDEF',
-    text: 'UNDEF',
+    text: 'Secretaría de Administración',
     link: 'http://sda.undef.ar/sda/',
-    image: '/icons/undef.svg',
-    description: 'Secretaría de Administración',
-  }, 
-              {
-    title: 'UNDEF',
-    text: 'UNDEF',
-    link: 'https://medifamilia.sksolution.ar/',
-    image: '/icons/undef.svg',
-    description: 'MediFamilia',
-  }, 
+image: '/images/undef.png',
+    description: 'UNDEF',
+  },
 ];
 
 export default function FadenaPage() {

@@ -45,5 +45,5 @@ May 26, 2025
 -Se agrego la descripcion de cada modulo
 -Queda pendiente hacerlo en forma de lista
 
-
-
+# Version Beta 1.8 #
+Listo para su deploy en el server

@@ -45,8 +45,8 @@ export default function RootLayout({
         </main>
 
 
-<footer className="bg-gray-600 text-white p-16">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+<footer className="bg-gray-600 text-white px-4 py-8 text-xs">
+  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
     {[
       {
         name: "FADENA",
@@ -83,31 +83,31 @@ export default function RootLayout({
         address: "Viamonte 153, CABA",
         map: "https://maps.app.goo.gl/L4hHxHHits9kSDkZ9",
       },
-            {
+      {
         name: "Facultad Militar Conjunta",
         address: "Savio 235, CABA",
         map: "https://maps.app.goo.gl/L4hHxHHits9kSDkZ9",
       },
-
     ].map((faculty, index) => (
-      <div key={index} className="flex items-start space-x-4">
-        <img src="/images/icono.png" alt={`Icono ${faculty.name}`} className="w-8 h-8 mt-1" />
+      <div key={index} className="flex items-start space-x-2">
+        <img src="/images/icono.png" alt={`Icono ${faculty.name}`} className="w-5 h-5 mt-1" />
         <div>
-          <h3 className="text-base font-bold">{faculty.name}</h3>
-          <p className="text-sm">{faculty.address}</p>
+          <h3 className="font-semibold">{faculty.name}</h3>
+          <p>{faculty.address}</p>
           <a
             href={faculty.map}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300 hover:underline text-xs"
+            className="text-blue-300 hover:underline"
           >
-            Ver en Google Maps
+            Ver en Maps
           </a>
         </div>
       </div>
     ))}
   </div>
 </footer>
+
       </body>
     </html>
   );
