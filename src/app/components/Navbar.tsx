@@ -20,10 +20,7 @@ function ColorSchemesExample() {
           <Nav.Link as={Link} href="/fadara">
             Fadara
           </Nav.Link>
-                    <Nav.Link as={Link} href="/escuelas">
-            Escuelas
-          </Nav.Link>
-                              <Nav.Link as={Link} href="/FFA">
+                            <Nav.Link as={Link} href="/FFA">
             FFA
           </Nav.Link>
           <Nav.Link as={Link} href="/fmc">

@@ -3,30 +3,38 @@
 import React from 'react';
 
 interface FacultyCardProps {
+  title: string;
   text: string;
+  description?: string;
   link: string;
   image: string;
 }
 
+
 interface ListaProps {
-  cards?: FacultyCardProps[]; // opcional
+  cards?: FacultyCardProps[];
 }
 
 const Lista = ({ cards = [] }: ListaProps) => {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-2 gap-12 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {cards.length === 0 ? (
           <p>No hay tarjetas para mostrar.</p>
         ) : (
           cards.map((card, index) => (
             <a key={index} href={card.link} className="no-underline">
-              <div className="border-b-2 border-b-black bg-white rounded-xl p-6 shadow-2xl hover:shadow-4xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 w-56 h-64 text-center flex flex-col items-center justify-start">
+              <div className="bg-zinc-200 rounded-xl p-6 shadow-2xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 w-64 h-64 text-center flex flex-col items-center justify-start">
+                {/* Icono pequeño */}
                 <img
                   src={card.image}
-                  className="w-36"
+                  className="w-h-24 h-24 mb-4"
                 />
-                <p className="text-black text-md  font-semibold py-12">{card.text}</p>
+                <h3 className="text-black text-sm font-bold mb-2">{card.text}</h3>
+                {card.description && (
+                  <p className="text-gray-500 text-xs mt-1">{card.description}</p>
+                )}
+
               </div>
             </a>
           ))

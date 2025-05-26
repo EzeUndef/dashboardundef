@@ -3,27 +3,31 @@ import Lista from '../components/lista';
 const fadenaCards = [
   {
     title: 'FMC',
-    text: 'Gestión de usuarios',
+    text: 'Facultad militar conjunta',
     link: 'http://guarani.fmc.undef.edu.ar/app/',
-    image: '/images/fmc.png',
+    image: '/icons/fmc.svg',
+            description: 'Gestión de usuarios',
   },
   {
     title: 'FMC',
-    text: 'Autogestion Alumnos',
+    text: 'Facultad militar conjunta',
     link: 'http://autogestion.fmc.undef.edu.ar/3w/',
-    image: '/images/fmc.png'
+    image: '/icons/fmc.svg',
+            description: 'Autogestion Alumnos',
   },
   {
     title: 'FMC',
-    text: 'Preinscripcion alumnos',
+    text: 'Facultad militar conjunta',
     link: 'http://preinscripcion.fmc.undef.edu.ar/p/',
-    image: '/images/fmc.png'
+    image: '/icons/fmc.svg',
+            description: 'Preinscripcion alumnos',
   },
       {
     title: 'FMC',
-    text: 'Test FMC',
+    text: 'Facultad militar conjunta',
     link: 'http://test.fmc.undef.edu.ar/app/',
-    image: '/images/fmc.png'
+        image: '/icons/fmc.svg',
+            description: 'Test FMC',
   },  
 ];
 

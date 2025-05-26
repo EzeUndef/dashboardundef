@@ -3,51 +3,59 @@ import Lista from '../components/lista';
 const fadenaCards = [
   {
     title: 'Fadena',
-    text: 'Gestión de usuarios',
+    text: 'Fadena',
     link: 'http://guarani.fadena.undef.edu.ar/app/',
-    image: '/images/fadena.png',
+    image: '/icons/fadena.svg',
+        description: 'Sistema Guaraní',
   },
   {
     title: 'Fadena',
-    text: 'Autogestion Alumnos',
+    text: 'Fadena',
     link: 'http://autogestion.fadena.undef.edu.ar/3w/',
-    image: '/images/fadena.png'
+    image: '/icons/fadena.svg',
+        description: 'Autogestión Alumnos',
   },
   {
     title: 'Fadena',
-    text: 'Autogestion Rectorado',
-    link: 'http://autogestion.rectorado.undef.edu.ar/3w/',
-    image: '/images/fadena.png'
-  },
-  {
-    title: 'Fadena',
-    text: 'Sobre Fadena',
+    text: 'Fadena',
     link: 'https://campus.fadena.undef.edu.ar/',
-    image: '/images/fadena.png'
+    image: '/icons/fadena.svg',
+        description: 'Campus Fadena',
   },
   {
     title: 'Fadena',
-    text: 'Preinscripcion alumnos',
+    text: 'Fadena',
     link: 'http://preinscripcion.fadena.undef.edu.ar/p/',
-    image: '/images/fadena.png'
+    image: '/icons/fadena.svg',
+        description: 'Preinscripción Fadena',
   },
   {
     title: 'Fadena',
-    text: 'Preinscripcion Rectorado',
+    text: 'Fadena',
     link: 'http://preinscripcion.rectorado.undef.edu.ar/p/',
-    image: '/images/fadena.png'
+    image: '/icons/fadena.svg',
+        description: 'Preinscripción Rectorado Fadena',
+  },
+  {
+    title: 'Fadena',
+    text: 'Fadena',
+    link: 'http://sistemas.fadena.undef.edu.ar/',
+    image: '/icons/fadena.svg',
+        description: 'Sistemas Fadena',
   },
     {
     title: 'Fadena',
-    text: 'Sistemas Fadena',
-    link: 'http://sistemas.fadena.undef.edu.ar/',
-    image: '/images/fadena.png'
+    text: 'Fadena',
+    link: 'http://test.fadena.undef.edu.ar/app/',
+    image: '/icons/fadena.svg',
+        description: 'Testing',
   },
       {
     title: 'Fadena',
-    text: 'Test Fadena',
-    link: 'http://test.fadena.undef.edu.ar/app/',
-    image: '/images/fadena.png'
+    text: 'Fadena',
+    link: 'http://autogestion.rectorado.undef.edu.ar/3w/',
+    image: '/icons/fadena.svg',
+        description: 'Autogestión Rectorado',
   },  
 ];
 
