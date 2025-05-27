@@ -31,7 +31,7 @@ image: '/images/fadena.png',
   },
   {
     title: 'Fadena',
-    text: 'Preinscripción Rectorado Fadena',
+    text: 'Preinscripción Rectorado',
     link: 'http://preinscripcion.rectorado.undef.edu.ar/p/',
 image: '/images/fadena.png',
     description: 'Fadena',

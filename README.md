@@ -47,3 +47,7 @@ May 26, 2025
 
 # Version Beta 1.8 #
 Listo para su deploy en el server
+
+# Version Beta 1.9 #
+Correccion lugar de las cards, Fadara ahora tiene a Ciencia del mar y Escuela Naval mientras
+que FFA ahora tiene la escuela de aviacion militar
