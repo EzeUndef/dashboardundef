@@ -10,7 +10,6 @@ interface FacultyCardProps {
   image: string;
 }
 
-
 interface ListaProps {
   cards?: FacultyCardProps[];
 }
@@ -23,18 +22,31 @@ const Lista = ({ cards = [] }: ListaProps) => {
           <p>No hay tarjetas para mostrar.</p>
         ) : (
           cards.map((card, index) => (
-            <a key={index} href={card.link} className="no-underline">
-              <div className="bg-sky-500 rounded-xl p-6 shadow-2xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 w-64 h-64 text-center flex flex-col items-center justify-start">
-                {/* Icono pequeño */}
+            <a
+              key={index}
+              href={card.link}
+              className="no-underline"
+              style={{ textDecoration: 'none' }} // asegura que no haya subrayado
+            >
+              <div className="bg-sky-500 rounded-xl p-6 shadow-emerald-950 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 w-64 h-64 text-center flex flex-col items-center justify-start">
                 <img
                   src={card.image}
-                  className="w-h-24 h-24 mb-4"
+                  className="w-28 h-24 mb-4"
                 />
-                <h3 className="text-white text-sm font-bold mb-2">{card.text}</h3>
+                <h3
+                  className="text-white text-sm font-bold mb-2"
+                  style={{ textDecoration: 'none' }}
+                >
+                  {card.text}
+                </h3>
                 {card.description && (
-                  <p className="text-white text-xs mt-1">{card.description}</p>
+                  <p
+                    className="text-white text-xs"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    {card.description}
+                  </p>
                 )}
-
               </div>
             </a>
           ))

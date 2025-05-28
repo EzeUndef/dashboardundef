@@ -51,3 +51,8 @@ Listo para su deploy en el server
 # Version Beta 1.9 #
 Correccion lugar de las cards, Fadara ahora tiene a Ciencia del mar y Escuela Naval mientras
 que FFA ahora tiene la escuela de aviacion militar
+
+# Version Beta 1.10 #
+Correccion shadow bg en las cards
+Arreglo en los iconos de las cards
+Se eliminaron componentes innecesarios (como carrousel y login)

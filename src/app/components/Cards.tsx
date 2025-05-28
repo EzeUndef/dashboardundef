@@ -13,6 +13,7 @@ function FacultyCard({ title, text, image, link }: FacultyCardProps) {
 
         <img src={image} alt={title} className="w-16 h-16 mx-auto mb-2" />
 
+
         <h3 className="text-center text-sm font-semibold">{title}</h3>
 
         {/* Descripción */}
