@@ -17,7 +17,7 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Derecha: redes sociales arriba, textos inline debajo */}
+
         <div className="flex flex-col items-end space-y-2">
           {/* Redes sociales */}
           <div className="flex space-x-4">
@@ -74,7 +74,7 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Botonera INLINE debajo de íconos */}
+          {/* Botonera */}
           <div className="flex space-x-4 text-sm font-medium text-gray-800">
             <a href="https://www.undef.edu.ar/boletin-nacional/">Boletín Nacional</a>
             <a href="https://www.undef.edu.ar/como-ingreso-a-las-ffaa/">¿Cómo ingreso a las FFAA?</a>

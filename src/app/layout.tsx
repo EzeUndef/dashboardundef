@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Header from "./components/header";
-import BasicExample from "./components/Navbar"; // O el nombre real de tu navbar
+import BasicExample from "./components/Navbar"; 
 import React from "react";
 
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-400 min-h-screen flex flex-col`}>
-        {/* Header global */}
+        {/* Header */}
         <header className="p-4 bg-white">
           <Header />
         </header>
