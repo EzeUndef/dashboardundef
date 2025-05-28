@@ -58,3 +58,5 @@ Arreglo en los iconos de las cards
 Se eliminaron componentes innecesarios (como carrousel y login)
 Ahora al hacer click en una card nos llevara a otra pestaña, cosa que antes no sucedia
 
+# Version Beta 1.11 #
+Se armo la version mobile del dashboard, arreglando algunos errores queda pendiente seguir corrijiendo

@@ -60,27 +60,43 @@ export default function CalendarioFeriados() {
           </div>
         )}
 
-        <div className="bg-cyan-100 rounded-xl shadow-2xl p-4">
-          <DateCalendar
-            displayWeekNumber
-            value={selectedDate}
-            onChange={(newDate) => setSelectedDate(newDate)}
-            slotProps={{
-              calendarHeader: {
-                className: "text-black font-bold",
-              },
-              leftArrowIcon: {
-                className: "text-black",
-              },
-              rightArrowIcon: {
-                className: "text-black",
-              },
-              day: {
-                className: "text-black font-bold",
-              },
-            }}
-          />
-        </div>
+<div className="bg-cyan-100 rounded-xl shadow-2xl p-4 w-full max-w-full overflow-x-hidden">
+  <DateCalendar
+    displayWeekNumber
+    value={selectedDate}
+    onChange={(newDate) => setSelectedDate(newDate)}
+    slotProps={{
+      calendarHeader: {
+        className: "text-black font-bold",
+      },
+      leftArrowIcon: {
+        className: "text-black",
+      },
+      rightArrowIcon: {
+        className: "text-black",
+      },
+      day: {
+        className: "text-black font-bold",
+      },
+    }}
+    sx={{
+      width: '100%',
+      maxWidth: '100%',
+      '.MuiPickersCalendarHeader-root': {
+        justifyContent: 'space-between',
+      },
+      '.MuiPickersSlideTransition-root': {
+        minHeight: 320, // asegurar altura coherente
+      },
+      '@media (max-width: 640px)': {
+        '.MuiDayCalendar-weekContainer': {
+          flexWrap: 'wrap', // adaptar días en mobile
+        },
+      },
+    }}
+  />
+</div>
+
 
         {feriadoDelDia && (
           <div className="mt-6 p-4 border border-gray-300 rounded-md bg-white shadow">

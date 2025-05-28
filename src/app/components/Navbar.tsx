@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function ColorSchemesExample() {
+function Navigation() {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
       <Container>
@@ -20,13 +20,13 @@ function ColorSchemesExample() {
           <Nav.Link as={Link} href="/fadara">
             Fadara
           </Nav.Link>
-                            <Nav.Link as={Link} href="/FFA">
+          <Nav.Link as={Link} href="/FFA">
             FFA
           </Nav.Link>
           <Nav.Link as={Link} href="/fmc">
             FMC
           </Nav.Link>
-                    <Nav.Link as={Link} href="/undef">
+          <Nav.Link as={Link} href="/undef">
             UNDEF
           </Nav.Link>
         </Nav>
@@ -35,4 +35,4 @@ function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default Navigation;
