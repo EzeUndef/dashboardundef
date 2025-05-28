@@ -56,3 +56,5 @@ que FFA ahora tiene la escuela de aviacion militar
 Correccion shadow bg en las cards
 Arreglo en los iconos de las cards
 Se eliminaron componentes innecesarios (como carrousel y login)
+Ahora al hacer click en una card nos llevara a otra pestaña, cosa que antes no sucedia
+

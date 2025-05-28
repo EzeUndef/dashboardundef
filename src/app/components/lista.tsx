@@ -25,8 +25,9 @@ const Lista = ({ cards = [] }: ListaProps) => {
             <a
               key={index}
               href={card.link}
+              target="_blank"
               className="no-underline"
-              style={{ textDecoration: 'none' }} // asegura que no haya subrayado
+              style={{ textDecoration: 'none' }}
             >
               <div className="bg-sky-500 rounded-xl p-6 shadow-emerald-950 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 w-64 h-64 text-center flex flex-col items-center justify-start">
                 <img
