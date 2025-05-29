@@ -16,7 +16,6 @@ function FacultyCard({ title, text, image, link }: FacultyCardProps) {
 
         <h3 className="text-center text-sm font-semibold">{title}</h3>
 
-        {/* Descripción */}
         <p className="text-center text-xs mt-2">{text}</p>
       </div>
     </a>

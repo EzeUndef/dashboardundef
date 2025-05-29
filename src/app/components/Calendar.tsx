@@ -86,11 +86,11 @@ export default function CalendarioFeriados() {
         justifyContent: 'space-between',
       },
       '.MuiPickersSlideTransition-root': {
-        minHeight: 320, // asegurar altura coherente
+        minHeight: 320, 
       },
       '@media (max-width: 640px)': {
         '.MuiDayCalendar-weekContainer': {
-          flexWrap: 'wrap', // adaptar días en mobile
+          flexWrap: 'wrap', 
         },
       },
     }}
