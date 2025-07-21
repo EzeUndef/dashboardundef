@@ -7,9 +7,9 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-start">
         {/* Logo a la izquierda */}
         <div className="logo">
-          <a href="https://www.undef.edu.ar">
+          <a href="https://undef.edu.ar/wp-content/uploads/2025/06/LOGOS-10-19-19-19.png">
             <img
-              src="https://www.undef.edu.ar/wp-content/themes/undefTheme/images/logoHeader_2024_claro.png"
+              src="https://undef.edu.ar/wp-content/uploads/2025/06/LOGOS-10-19-19-19.png"
               alt="UNDEF"
               width="237"
               className="block"

@@ -14,22 +14,26 @@ function Navigation() {
           <Nav.Link as={Link} href="/">
             Inicio
           </Nav.Link>
-          <Nav.Link as={Link} href="/fadena">
-            Fadena
+                    <Nav.Link as={Link} href="/Datos">
+           Datos Personales
           </Nav.Link>
-          <Nav.Link as={Link} href="/fadara">
-            Fadara
+                              <Nav.Link as={Link} href="/Incompatibilidad">
+           DJ Incompatibilidad
           </Nav.Link>
-          <Nav.Link as={Link} href="/FFA">
-            FFA
+                              <Nav.Link as={Link} href="/Cargos">
+           DJ Cargos y Actividades
           </Nav.Link>
-          <Nav.Link as={Link} href="/fmc">
-            FMC
+                              <Nav.Link as={Link} href="/Familia">
+           Grupo Familiar
           </Nav.Link>
-          <Nav.Link as={Link} href="/undef">
-            UNDEF
+                              <Nav.Link as={Link} href="/Formulario">
+           Formulario 572
+          </Nav.Link>
+                                        <Nav.Link as={Link} href="/Anses">
+           Anses
           </Nav.Link>
         </Nav>
+        
       </Container>
     </Navbar>
   );
